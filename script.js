@@ -1,4 +1,3 @@
-// Datos de los 9 autos con imágenes locales 
 const carsData = [
     {
         id: 1,
@@ -290,7 +289,6 @@ const carsData = [
     }
 ];
 
-// Variables del DOM (SIN CAMBIOS)
 const carsGrid = document.getElementById('cars-grid');
 const brandFilter = document.getElementById('brand-filter');
 const priceFilter = document.getElementById('price-filter');
@@ -298,7 +296,6 @@ const sortFilter = document.getElementById('sort-filter');
 const modal = document.getElementById('car-modal');
 const closeModalBtns = document.querySelectorAll('.close-modal');
 
-// 1. Inicializar la página (SIN CAMBIOS)
 document.addEventListener('DOMContentLoaded', () => {
     renderCars(carsData);
     
@@ -329,7 +326,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.newsletter-input button')?.addEventListener('click', handleNewsletterSubmit);
 });
 
-// 2. Renderizar Tarjetas (ACTUALIZADO: Eliminadas las URL de respaldo)
 function renderCars(cars) {
     carsGrid.innerHTML = '';
     
@@ -358,7 +354,6 @@ function createCarCard(car) {
     card.style.animationDelay = `${car.id * 0.1}s`;
     
     const isNew = car.year >= 2023;
-    // La lógica de la ruta ahora coincidirá exactamente con tu carpeta gracias a la corrección en carsData
     const imagePath = `images/${car.imageBase}1${car.imageExtension}`;
     
     card.innerHTML = `
@@ -385,7 +380,6 @@ function createCarCard(car) {
     return card;
 }
 
-// 3. Sistema de Filtrado (SIN CAMBIOS)
 function filterCars() {
     const brandValue = brandFilter.value;
     const priceValue = priceFilter.value;
@@ -421,21 +415,17 @@ function filterCars() {
     renderCars(filtered);
 }
 
-// 4. Lógica del Modal (ACTUALIZADO: Eliminadas las URL de respaldo)
 window.openModal = function(id) {
     const car = carsData.find(c => c.id === id);
     if (!car) return;
 
-    // Generar rutas de imágenes locales
     const images = [];
     for (let i = 1; i <= car.totalImages; i++) {
         images.push(`images/${car.imageBase}${i}${car.imageExtension}`);
     }
 
     const mainImg = document.getElementById('modal-main-img');
-    mainImg.src = images[0];
-    // Se eliminó el onerror con URL externa
-    
+    mainImg.src = images[0];    
     document.getElementById('modal-title').innerText = `${car.brand} ${car.model}`;
     document.getElementById('modal-price').innerText = `$${car.price} ${car.priceUnit}`;
     
@@ -479,7 +469,6 @@ window.changeModalImage = function(src, element) {
     element.classList.add('active');
 }
 
-// 5. Cerrar Modales (SIN CAMBIOS)
 closeModalBtns.forEach(btn => {
     btn.onclick = function() {
         const modal = this.closest('.modal');
@@ -495,7 +484,6 @@ window.onclick = function(event) {
     }
 }
 
-// 6. Formulario de Contacto (SIN CAMBIOS)
 function handleContactSubmit(e) {
     e.preventDefault();
     const form = e.target;
@@ -529,7 +517,6 @@ function handleContactSubmit(e) {
     }, 2000);
 }
 
-// 7. Newsletter (SIN CAMBIOS)
 function handleNewsletterSubmit(e) {
     e.preventDefault();
     const input = this.parentElement.querySelector('input');
@@ -544,7 +531,6 @@ function handleNewsletterSubmit(e) {
     showNotification("¡Gracias por suscribirte al Newsletter Élite Motors!", "success");
 }
 
-// 8. Menú Hamburguesa (SIN CAMBIOS)
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -574,7 +560,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// 9. Scroll Header (SIN CAMBIOS)
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const header = document.getElementById('navbar');
@@ -611,7 +596,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 10. Funciones auxiliares (SIN CAMBIOS)
 function showNotification(message, type = "success") {
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
