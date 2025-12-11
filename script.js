@@ -297,25 +297,30 @@ const modal = document.getElementById('car-modal');
 const closeModalBtns = document.querySelectorAll('.close-modal');
 
 document.addEventListener('DOMContentLoaded', () => {
-    renderCars(carsData);
-    
+
+    if (carsGrid) {
+        renderCars(carsData);
+        
+        brandFilter.addEventListener('change', filterCars);
+        priceFilter.addEventListener('change', filterCars);
+        sortFilter.addEventListener('change', filterCars);
+    }
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
         });
     });
-    
-    brandFilter.addEventListener('change', filterCars);
-    priceFilter.addEventListener('change', filterCars);
-    sortFilter.addEventListener('change', filterCars);
-    
+
     document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
-        document.querySelector('#catalogo').scrollIntoView({ behavior: 'smooth' });
+        const target = document.querySelector('#ubicacion') || document.querySelector('#catalogo');
+        if(target) target.scrollIntoView({ behavior: 'smooth' });
     });
     
     const contactForm = document.getElementById('contact-form');
@@ -327,6 +332,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function renderCars(cars) {
+    if (!carsGrid) return; 
+
     carsGrid.innerHTML = '';
     
     if (cars.length === 0) {
@@ -381,6 +388,8 @@ function createCarCard(car) {
 }
 
 function filterCars() {
+    if (!carsGrid) return; 
+
     const brandValue = brandFilter.value;
     const priceValue = priceFilter.value;
     const sortValue = sortFilter.value;
@@ -416,6 +425,8 @@ function filterCars() {
 }
 
 window.openModal = function(id) {
+    if (!modal) return; 
+
     const car = carsData.find(c => c.id === id);
     if (!car) return;
 
@@ -454,9 +465,11 @@ window.openModal = function(id) {
 
     const whatsappBtn = document.getElementById('modal-whatsapp');
     const message = `Hola, estoy interesado en el ${car.brand} ${car.model} ${car.year} por $${car.price} ${car.priceUnit}. ¿Podrían darme más información?`;
-    const whatsappUrl = `https://wa.me/5215587654321?text=${encodeURIComponent(message)}`;
-    whatsappBtn.href = whatsappUrl;
+    const NUMERO_DIRECTO = "+52 7292 57 7708 "; 
+    const whatsappUrl = `https://wa.me/${NUMERO_DIRECTO}?text=${encodeURIComponent(message)}`;
 
+    whatsappBtn.href = whatsappUrl;
+    whatsappBtn.target = "_blank";
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
@@ -469,13 +482,15 @@ window.changeModalImage = function(src, element) {
     element.classList.add('active');
 }
 
-closeModalBtns.forEach(btn => {
-    btn.onclick = function() {
-        const modal = this.closest('.modal');
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    };
-});
+if (closeModalBtns) {
+    closeModalBtns.forEach(btn => {
+        btn.onclick = function() {
+            const modal = this.closest('.modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        };
+    });
+}
 
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
@@ -487,6 +502,7 @@ window.onclick = function(event) {
 function handleContactSubmit(e) {
     e.preventDefault();
     const form = e.target;
+    
     const inputs = form.querySelectorAll('input, textarea, select');
     let isValid = true;
     
@@ -509,12 +525,47 @@ function handleContactSubmit(e) {
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
     submitBtn.disabled = true;
     
-    setTimeout(() => {
+    const nombre = form.querySelector('input[placeholder="Nombre Completo"]').value;
+    const correo = form.querySelector('input[placeholder="Correo Electrónico"]').value;
+    const telefono = form.querySelector('input[placeholder="Teléfono (10 dígitos)"]').value;
+    const selectInteres = document.getElementById('car-interest');
+    const autoInteres = selectInteres.options[selectInteres.selectedIndex].text;
+    const mensajeUsuario = form.querySelector('textarea').value;
+
+    const datosParaPython = {
+        nombre: nombre,
+        correo: correo,
+        telefono: telefono,
+        auto: autoInteres,
+        mensaje: mensajeUsuario
+    };
+
+    fetch('http://localhost:5000/enviar-mensaje', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(datosParaPython)
+    })
+    .then(response => response.json())
+    .then(data => {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-        form.reset();
-        showNotification("¡Solicitud enviada con éxito! Un asesor se pondrá en contacto contigo en breve.", "success");
-    }, 2000);
+        
+        if (data.status === "exito") {
+            form.reset();
+            showNotification("¡Solicitud enviada exitosamente!", "success");
+        } else {
+            console.error("Error del servidor:", data.error);
+            showNotification("Error enviando mensaje: " + data.error, "error");
+        }
+    })
+    .catch((error) => {
+        console.error('Error de conexión:', error);
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        showNotification("No se pudo conectar con el servidor. Verifica app.py", "error");
+    });
 }
 
 function handleNewsletterSubmit(e) {
@@ -661,6 +712,6 @@ function validateEmail(email) {
 document.addEventListener('contextmenu', function(e) {
     if (e.target.tagName === 'IMG' && e.target.closest('.car-card, .modal-gallery')) {
         e.preventDefault();
-        showNotification("Las imágenes están protegidas. Contáctanos para obtener más información.", "info");
+        showNotification("Las imágenes están protegidas.", "info");
     }
 });

@@ -26,7 +26,7 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
                     <li><a href="#ubicacion">Ubicación</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
@@ -65,57 +65,13 @@
                     </div>
                 </div>
             </div>
-            <a href="#catalogo" class="btn btn-primary">
+            <a href="catalogo.html" class="btn btn-primary">
                 <i class="fas fa-search"></i> Explorar Colección
             </a>
         </div>
         <div class="scroll-indicator">
             <i class="fas fa-chevron-down"></i>
         </div>
-    </section>
-
-    <section id="catalogo" class="catalog-section container">
-        <div class="section-header">
-            <center><h2>Nuestra <span class="text-gold">Colección</span></h2></center>
-            <div class="divider"></div>
-            <p class="section-subtitle">Vehículos exclusivos disponibles para entrega inmediata</p>
-        </div>
-
-        <div class="filters">
-            <div class="filter-group">
-                <i class="fas fa-filter"></i>
-                <select id="brand-filter">
-                    <option value="all">Todas las Marcas</option>
-                    <option value="Lamborghini">Lamborghini</option>
-                    <option value="Ferrari">Ferrari</option>
-                    <option value="Porsche">Porsche</option>
-                    <option value="McLaren">McLaren</option>
-                    <option value="Rolls-Royce">Rolls-Royce</option>
-                    <option value="Mercedes-Benz">Mercedes-Benz</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <i class="fas fa-dollar-sign"></i>
-                <select id="price-filter">
-                    <option value="all">Todos los Precios</option>
-                    <option value="low">Menos de $5 MDP</option>
-                    <option value="mid">$5 MDP - $10 MDP</option>
-                    <option value="high">Más de $10 MDP</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <i class="fas fa-sort-amount-down"></i>
-                <select id="sort-filter">
-                    <option value="default">Ordenar por</option>
-                    <option value="price-asc">Precio: Menor a Mayor</option>
-                    <option value="price-desc">Precio: Mayor a Menor</option>
-                    <option value="year-desc">Más Nuevos</option>
-                    <option value="year-asc">Más Antiguos</option>
-                </select>
-            </div>
-        </div>
-
-        <div id="cars-grid" class="cars-grid"></div>
     </section>
 
     <section id="ubicacion" class="location-section">
@@ -254,7 +210,6 @@
         </div>
     </section>
 
-    
     <footer>
         <div class="container footer-content">
             <div class="footer-col">
@@ -296,33 +251,6 @@
             </div>
         </div>
     </footer>
-    </section>
-
-   <div id="car-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">×</span>
-            <div class="modal-body">
-                <div class="modal-gallery">
-                    <img src="" alt="Auto Detalle" id="modal-main-img">
-                    <div class="gallery-thumbnails" id="modal-thumbnails"></div>
-                </div>
-                <div class="modal-info">
-                    <h2 id="modal-title">Nombre del Auto</h2>
-                    <p class="modal-price" id="modal-price">$0 MDP</p>
-                    <div class="specs-grid" id="modal-specs"></div>
-                    <div class="luxury-features">
-                        <h3>Características Especiales</h3>
-                        <ul id="modal-features"></ul>
-                    </div>
-                    <div class="modal-actions">
-                        <a href="#" class="btn btn-outline" id="modal-whatsapp" style="width: 100%; justify-content: center;">
-                            <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
