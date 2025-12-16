@@ -305,6 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
         priceFilter.addEventListener('change', filterCars);
         sortFilter.addEventListener('change', filterCars);
     }
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
@@ -465,11 +466,13 @@ window.openModal = function(id) {
 
     const whatsappBtn = document.getElementById('modal-whatsapp');
     const message = `Hola, estoy interesado en el ${car.brand} ${car.model} ${car.year} por $${car.price} ${car.priceUnit}. ¿Podrían darme más información?`;
-    const NUMERO_DIRECTO = "+52 7292 57 7708 "; 
+    
+    const NUMERO_DIRECTO = "+525539735554"; 
     const whatsappUrl = `https://wa.me/${NUMERO_DIRECTO}?text=${encodeURIComponent(message)}`;
 
     whatsappBtn.href = whatsappUrl;
     whatsappBtn.target = "_blank";
+    
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
@@ -525,47 +528,12 @@ function handleContactSubmit(e) {
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
     submitBtn.disabled = true;
     
-    const nombre = form.querySelector('input[placeholder="Nombre Completo"]').value;
-    const correo = form.querySelector('input[placeholder="Correo Electrónico"]').value;
-    const telefono = form.querySelector('input[placeholder="Teléfono (10 dígitos)"]').value;
-    const selectInteres = document.getElementById('car-interest');
-    const autoInteres = selectInteres.options[selectInteres.selectedIndex].text;
-    const mensajeUsuario = form.querySelector('textarea').value;
-
-    const datosParaPython = {
-        nombre: nombre,
-        correo: correo,
-        telefono: telefono,
-        auto: autoInteres,
-        mensaje: mensajeUsuario
-    };
-
-    fetch('http://localhost:5000/enviar-mensaje', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(datosParaPython)
-    })
-    .then(response => response.json())
-    .then(data => {
+    setTimeout(() => {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-        
-        if (data.status === "exito") {
-            form.reset();
-            showNotification("¡Solicitud enviada exitosamente!", "success");
-        } else {
-            console.error("Error del servidor:", data.error);
-            showNotification("Error enviando mensaje: " + data.error, "error");
-        }
-    })
-    .catch((error) => {
-        console.error('Error de conexión:', error);
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        showNotification("No se pudo conectar con el servidor. Verifica app.py", "error");
-    });
+        form.reset();
+        showNotification("¡Solicitud enviada exitosamente! Te contactaremos pronto.", "success");
+    }, 1500);
 }
 
 function handleNewsletterSubmit(e) {
@@ -579,7 +547,7 @@ function handleNewsletterSubmit(e) {
     }
     
     input.value = '';
-    showNotification("¡Gracias por suscribirte al Newsletter Élite Motors!", "success");
+    showNotification("¡Gracias por suscribirte al Newsletter de Global Car!", "success");
 }
 
 const hamburger = document.querySelector('.hamburger');
@@ -614,6 +582,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const header = document.getElementById('navbar');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 100) {
@@ -621,6 +590,7 @@ window.addEventListener('scroll', () => {
         header.style.backdropFilter = 'blur(10px)';
         header.style.padding = '15px 0';
         header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.3)';
+        header.style.borderBottom = '1px solid rgba(201, 167, 77, 0.1)'; 
         
         if (currentScroll > lastScroll && currentScroll > 200) {
             header.style.transform = 'translateY(-100%)';
@@ -628,23 +598,25 @@ window.addEventListener('scroll', () => {
             header.style.transform = 'translateY(0)';
         }
     } else {
-        header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+        header.style.backgroundColor = 'transparent'; 
         header.style.backdropFilter = 'none';
         header.style.padding = '20px 0';
         header.style.boxShadow = 'none';
+        header.style.borderBottom = 'none'; 
         header.style.transform = 'translateY(0)';
     }
     
-    lastScroll = currentScroll;
-    
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    if (scrollIndicator && currentScroll > 100) {
-        scrollIndicator.style.opacity = '0';
-        scrollIndicator.style.visibility = 'hidden';
-    } else if (scrollIndicator) {
-        scrollIndicator.style.opacity = '1';
-        scrollIndicator.style.visibility = 'visible';
+    if (scrollIndicator) {
+        if (currentScroll > 100) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.visibility = 'hidden';
+        } else {
+            scrollIndicator.style.opacity = '1';
+            scrollIndicator.style.visibility = 'visible';
+        }
     }
+    
+    lastScroll = currentScroll;
 });
 
 function showNotification(message, type = "success") {
