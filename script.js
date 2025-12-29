@@ -1,291 +1,48 @@
 const carsData = [
     {
-        id: 1,
-        brand: "Lamborghini",
-        model: "Urus Performance",
-        year: 2023,
-        price: "6.8",
-        priceUnit: "MDP",
-        kilometers: "5,000",
-        exteriorColor: "Azul",
-        interiorColor: "Negro con Azul",
-        imageBase: "lamborghiniUrus", 
-        imageExtension: ".webp",
-        totalImages: 6,
-        specs: {
-            motor: "V8 Twin-Turbo 4.0L",
-            potencia: "666 HP",
-            aceleracion: "3.3s (0-100 km/h)",
-            velocidadMax: "305 km/h",
-            transmision: "Automática 8 velocidades",
-            traccion: "Integral permanente",
-            consumo: "12.7 L/100km"
-        },
-        features: [
-            "Sistema de escape deportivo",
-            "Modos de conducción: STRADA, SPORT, CORSA",
-            "Suspensión neumática adaptativa",
-            "Frenos de cerámica carbono-cerámica",
-            "Sistema de sonido Bang & Olufsen",
-            "Pantalla táctil 10.1''",
-            "Asientos deportivos con calefacción"
-        ]
+        id: 1, brand: "Lamborghini", model: "Urus Performance", year: 2023, price: "6.8", priceUnit: "MDP", kilometers: "5,000", exteriorColor: "Azul", interiorColor: "Negro con Azul", imageBase: "lamborghiniUrus", imageExtension: ".webp", totalImages: 6,
+        specs: { motor: "V8 Twin-Turbo 4.0L", potencia: "666 HP", aceleracion: "3.3s (0-100 km/h)", velocidadMax: "305 km/h", transmision: "Automática 8 velocidades", traccion: "Integral permanente", consumo: "12.7 L/100km" },
+        features: ["Sistema de escape deportivo", "Modos de conducción: STRADA, SPORT, CORSA", "Suspensión neumática adaptativa", "Frenos de cerámica carbono-cerámica", "Sistema de sonido Bang & Olufsen", "Pantalla táctil 10.1''", "Asientos deportivos con calefacción"]
     },
     {
-        id: 2,
-        brand: "Lamborghini",
-        model: "STO",
-        year: 2023,
-        price: "13.5",
-        priceUnit: "MDP",
-        kilometers: "1,600",
-        exteriorColor: "Azul",
-        interiorColor: "Amarillo",
-        imageBase: "lamborghiniSto",
-        imageExtension: ".webp",
-        totalImages: 6,
-        specs: {
-            motor: "V10 Atmosférico 5.2L",
-            potencia: "640 HP",
-            aceleracion: "3.0s (0-100 km/h)",
-            velocidadMax: "310 km/h",
-            transmision: "Automática 7 velocidades",
-            traccion: "Trasera",
-            peso: "1,339 kg"
-        },
-        features: [
-            "Paquete de competición",
-            "Aerodinámica activa",
-            "Sistema de frenado de competición",
-            "Chasis de fibra de carbono",
-            "Modo de conducción de pista",
-            "Asientos de cubo de carbono",
-            "Pantalla telemetría"
-        ]
+        id: 2, brand: "Lamborghini", model: "STO", year: 2023, price: "13.5", priceUnit: "MDP", kilometers: "1,600", exteriorColor: "Azul", interiorColor: "Amarillo", imageBase: "lamborghiniSto", imageExtension: ".webp", totalImages: 6,
+        specs: { motor: "V10 Atmosférico 5.2L", potencia: "640 HP", aceleracion: "3.0s", velocidadMax: "310 km/h", transmision: "Automática 7 vel", traccion: "Trasera", peso: "1,339 kg" },
+        features: ["Paquete competición", "Aerodinámica activa", "Frenos competición", "Chasis carbono", "Modo pista", "Asientos cubo", "Telemetría"]
     },
     {
-        id: 3,
-        brand: "Lamborghini",
-        model: "Huracán Tecnica",
-        year: 2023,
-        price: "9.3",
-        priceUnit: "MDP",
-        kilometers: "5,000",
-        exteriorColor: "Amarillo",
-        interiorColor: "Amarillo",
-        imageBase: "lamborghiniHuracan",
-        imageExtension: ".webp",
-        totalImages: 6,
-        specs: {
-            motor: "V10 Atmosférico 5.2L",
-            potencia: "640 HP",
-            aceleracion: "3.2s (0-100 km/h)",
-            velocidadMax: "325 km/h",
-            transmision: "Automática 7 velocidades",
-            traccion: "Trasera",
-            parMotor: "600 Nm"
-        },
-        features: [
-            "Sistema LDVI (Lamborghini Integrated Vehicle Dynamics)",
-            "Aerodinámica mejorada",
-            "Suspensión magneto-reológica",
-            "Modo Strada, Sport y Corsa",
-            "Sistema de escape deportivo",
-            "Rines de aleación forjada",
-            "Interior en Alcántara"
-        ]
+        id: 3, brand: "Lamborghini", model: "Huracán Tecnica", year: 2023, price: "9.3", priceUnit: "MDP", kilometers: "5,000", exteriorColor: "Amarillo", interiorColor: "Amarillo", imageBase: "lamborghiniHuracan", imageExtension: ".webp", totalImages: 6,
+        specs: { motor: "V10 Atmosférico 5.2L", potencia: "640 HP", aceleracion: "3.2s", velocidadMax: "325 km/h", transmision: "Automática 7 vel", traccion: "Trasera", parMotor: "600 Nm" },
+        features: ["Sistema LDVI", "Aerodinámica mejorada", "Suspensión magneto-reológica", "Modos conducción", "Escape deportivo", "Rines forjados", "Interior Alcántara"]
     },
     {
-        id: 4,
-        brand: "Ferrari",
-        model: "296 GTB",
-        year: 2024,
-        price: "10.5",
-        priceUnit: "MDP",
-        kilometers: "1,500+",
-        exteriorColor: "Azul",
-        interiorColor: "Negro y Amarillo",
-        imageBase: "Ferrari296Gtb",
-        imageExtension: ".webp",
-        totalImages: 6,
-        specs: {
-            motor: "V6 Twin-Turbo Híbrido 3.0L",
-            potencia: "830 HP",
-            aceleracion: "2.9s (0-100 km/h)",
-            velocidadMax: "330 km/h",
-            transmision: "Doble embrague 8 velocidades",
-            potenciaElectrica: "122 kW",
-            autonomiaElectrica: "25 km"
-        },
-        features: [
-            "Sistema híbrido enchufable",
-            "Modo eléctrico puro",
-            "Aerodinámica activa",
-            "Frenos de cerámica carbono-cerámica",
-            "Pantalla digital 16''",
-            "Sistema de sonido JBL",
-            "Asientos deportivos con memoria"
-        ]
+        id: 4, brand: "Ferrari", model: "296 GTB", year: 2024, price: "10.5", priceUnit: "MDP", kilometers: "1,500+", exteriorColor: "Azul", interiorColor: "Negro y Amarillo", imageBase: "Ferrari296Gtb", imageExtension: ".webp", totalImages: 6,
+        specs: { motor: "V6 Twin-Turbo Híbrido", potencia: "830 HP", aceleracion: "2.9s", velocidadMax: "330 km/h", transmision: "Doble embrague 8 vel", potenciaElectrica: "122 kW", autonomiaElectrica: "25 km" },
+        features: ["Híbrido enchufable", "Modo eléctrico puro", "Aerodinámica activa", "Frenos carbono", "Pantalla 16''", "Sonido JBL", "Asientos memoria"]
     },
     {
-        id: 5,
-        brand: "Ferrari",
-        model: "Roma",
-        year: 2021,
-        price: "6.6",
-        priceUnit: "MDP",
-        kilometers: "7,000",
-        exteriorColor: "Gris",
-        interiorColor: "Rojo",
-        imageBase: "FerrariRoma",
-        imageExtension: ".webp",
-        totalImages: 6,
-        specs: {
-            motor: "V8 Twin-Turbo 3.9L",
-            potencia: "620 HP",
-            aceleracion: "3.4s (0-100 km/h)",
-            velocidadMax: "320 km/h",
-            transmision: "Doble embrague 8 velocidades",
-            traccion: "Trasera",
-            consumo: "10.4 L/100km"
-        },
-        features: [
-            "Diseño Gran Turismo",
-            "Pantalla digital 16''",
-            "Sistema de sonido premium",
-            "Asientos eléctricos con memoria",
-            "Climatizador automático",
-            "Control de velocidad crucero",
-            "Cámara de reversa"
-        ]
+        id: 5, brand: "Ferrari", model: "Roma", year: 2021, price: "6.6", priceUnit: "MDP", kilometers: "7,000", exteriorColor: "Gris", interiorColor: "Rojo", imageBase: "FerrariRoma", imageExtension: ".webp", totalImages: 6,
+        specs: { motor: "V8 Twin-Turbo 3.9L", potencia: "620 HP", aceleracion: "3.4s", velocidadMax: "320 km/h", transmision: "Doble embrague 8 vel", traccion: "Trasera", consumo: "10.4 L/100km" },
+        features: ["Diseño GT", "Pantalla 16''", "Sonido premium", "Asientos eléctricos", "Climatizador", "Control crucero", "Cámara reversa"]
     },
     {
-        id: 6,
-        brand: "Porsche",
-        model: "GT3 RS",
-        year: 2025,
-        price: "8.5",
-        priceUnit: "MDP",
-        kilometers: "700",
-        exteriorColor: "Rojo con fibra de carbono",
-        interiorColor: "Negro y Rojo",
-        imageBase: "PorscheGt3Rs",
-        imageExtension: ".webp",
-        totalImages: 6,
-        specs: {
-            motor: "Flat-6 Atmosférico 4.0L",
-            potencia: "525 HP",
-            aceleracion: "3.2s (0-100 km/h)",
-            velocidadMax: "296 km/h",
-            transmision: "PDK 7 velocidades",
-            traccion: "Trasera",
-            rpmMax: "9,000"
-        },
-        features: [
-            "Paquete aerodinámico Weissach",
-            "Suspensión de doble horquilla",
-            "Frenos de cerámica PCCB",
-            "Rines de magnesio forjado",
-            "Asientos de cubo de carbono",
-            "Jaula de seguridad integrada",
-            "Sistema de telemetría"
-        ]
+        id: 6, brand: "Porsche", model: "GT3 RS", year: 2025, price: "8.5", priceUnit: "MDP", kilometers: "700", exteriorColor: "Rojo carbono", interiorColor: "Negro y Rojo", imageBase: "PorscheGt3Rs", imageExtension: ".webp", totalImages: 6,
+        specs: { motor: "Flat-6 Atmosférico 4.0L", potencia: "525 HP", aceleracion: "3.2s", velocidadMax: "296 km/h", transmision: "PDK 7 vel", traccion: "Trasera", rpmMax: "9,000" },
+        features: ["Paquete Weissach", "Suspensión doble horquilla", "Frenos PCCB", "Rines magnesio", "Asientos carbono", "Jaula seguridad", "Telemetría"]
     },
     {
-        id: 7,
-        brand: "McLaren",
-        model: "765LT",
-        year: 2021,
-        price: "11.2",
-        priceUnit: "MDP",
-        kilometers: "1,300+",
-        exteriorColor: "Gris con fibra de carbono",
-        interiorColor: "Negro con Naranja",
-        imageBase: "Mclaren765lt",
-        imageExtension: ".webp",
-        totalImages: 6,
-        specs: {
-            motor: "V8 Twin-Turbo 4.0L",
-            potencia: "765 HP",
-            aceleracion: "2.8s (0-100 km/h)",
-            velocidadMax: "330 km/h",
-            transmision: "Doble embrague 7 velocidades",
-            traccion: "Trasera",
-            parMotor: "800 Nm"
-        },
-        features: [
-            "Paquete Longtail",
-            "Aerodinámica mejorada",
-            "Sistema de escape de titanio",
-            "Frenos de cerámica",
-            "Chasis monocasco de carbono",
-            "Suspensión hidráulica",
-            "Modos de conducción variable"
-        ]
+        id: 7, brand: "McLaren", model: "765LT", year: 2021, price: "11.2", priceUnit: "MDP", kilometers: "1,300+", exteriorColor: "Gris carbono", interiorColor: "Negro Naranja", imageBase: "Mclaren765lt", imageExtension: ".webp", totalImages: 6,
+        specs: { motor: "V8 Twin-Turbo 4.0L", potencia: "765 HP", aceleracion: "2.8s", velocidadMax: "330 km/h", transmision: "Doble embrague 7 vel", traccion: "Trasera", parMotor: "800 Nm" },
+        features: ["Paquete Longtail", "Aerodinámica", "Escape titanio", "Frenos cerámica", "Chasis monocasco", "Suspensión hidráulica", "Modos conducción"]
     },
     {
-        id: 8,
-        brand: "Rolls-Royce",
-        model: "Cullinan",
-        year: 2023,
-        price: "12.9",
-        priceUnit: "MDP",
-        kilometers: "308",
-        exteriorColor: "Blanco",
-        interiorColor: "Blanco con Morado",
-        imageBase: "RollsRoyceCullinan",
-        imageExtension: ".webp",
-        totalImages: 6,
-        specs: {
-            motor: "V12 Twin-Turbo 6.75L",
-            potencia: "571 HP",
-            aceleracion: "5.2s (0-100 km/h)",
-            velocidadMax: "250 km/h (limitada)",
-            transmision: "Automática 8 velocidades",
-            traccion: "Integral",
-            consumo: "15.0 L/100km"
-        },
-        features: [
-            "Techo Starlight",
-            "Suspensión Magic Carpet Ride",
-            "Sistema de sonido Bespoke Audio",
-            "Asientos masajeadores",
-            "Tablero en madera veneciana",
-            "Pantalla de entretenimiento trasera",
-            "Sistema de climatización 4 zonas"
-        ]
+        id: 8, brand: "Rolls-Royce", model: "Cullinan", year: 2023, price: "12.9", priceUnit: "MDP", kilometers: "308", exteriorColor: "Blanco", interiorColor: "Blanco Morado", imageBase: "RollsRoyceCullinan", imageExtension: ".webp", totalImages: 6,
+        specs: { motor: "V12 Twin-Turbo 6.75L", potencia: "571 HP", aceleracion: "5.2s", velocidadMax: "250 km/h", transmision: "Automática 8 vel", traccion: "Integral", consumo: "15.0 L/100km" },
+        features: ["Techo Starlight", "Suspensión Magic Carpet", "Sonido Bespoke", "Asientos masaje", "Madera veneciana", "Pantallas traseras", "Clima 4 zonas"]
     },
     {
-        id: 9,
-        brand: "Mercedes-Benz",
-        model: "AMG GTR",
-        year: 2021,
-        price: "3.9",
-        priceUnit: "MDP",
-        kilometers: "2,500",
-        exteriorColor: "Gris con fibra de carbono",
-        interiorColor: "Negro",
-        imageBase: "MercedesBenzGtr",
-        imageExtension: ".webp",
-        totalImages: 6,
-        specs: {
-            motor: "V8 Biturbo 4.0L",
-            potencia: "585 HP",
-            aceleracion: "3.6s (0-100 km/h)",
-            velocidadMax: "318 km/h",
-            transmision: "Automática 7 velocidades",
-            traccion: "Trasera",
-            parMotor: "700 Nm"
-        },
-        features: [
-            "Paquete AMG Performance",
-            "Aerodinámica activa",
-            "Suspensión AMG RIDE CONTROL",
-            "Frenos de compuesto cerámico",
-            "Rines de aleación forjada",
-            "Interior en cuero Nappa",
-            "Sistema de sonido Burmester"
-        ]
+        id: 9, brand: "Mercedes-Benz", model: "AMG GTR", year: 2021, price: "3.9", priceUnit: "MDP", kilometers: "2,500", exteriorColor: "Gris carbono", interiorColor: "Negro", imageBase: "MercedesBenzGtr", imageExtension: ".webp", totalImages: 6,
+        specs: { motor: "V8 Biturbo 4.0L", potencia: "585 HP", aceleracion: "3.6s", velocidadMax: "318 km/h", transmision: "Automática 7 vel", traccion: "Trasera", parMotor: "700 Nm" },
+        features: ["Paquete AMG Performance", "Aerodinámica activa", "Suspensión AMG RIDE", "Frenos cerámicos", "Rines forjados", "Cuero Nappa", "Sonido Burmester"]
     }
 ];
 
@@ -295,81 +52,130 @@ const priceFilter = document.getElementById('price-filter');
 const sortFilter = document.getElementById('sort-filter');
 const modal = document.getElementById('car-modal');
 const closeModalBtns = document.querySelectorAll('.close-modal');
+const NUMERO_DIRECTO = "525539735554";
+const lightbox = document.getElementById('fullscreen-lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const btnZoomToggle = document.getElementById('btn-zoom-toggle');
+const closeLightbox = document.querySelector('.close-lightbox');
 
 document.addEventListener('DOMContentLoaded', () => {
-
     if (carsGrid) {
         renderCars(carsData);
-        
         brandFilter.addEventListener('change', filterCars);
         priceFilter.addEventListener('change', filterCars);
         sortFilter.addEventListener('change', filterCars);
     }
-    
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const targetElement = document.querySelector(href);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
-        });
-    });
-
-    document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
-        const target = document.querySelector('#ubicacion') || document.querySelector('#catalogo');
-        if(target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-    
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', handleContactSubmit);
-    }
-    
-    document.querySelector('.newsletter-input button')?.addEventListener('click', handleNewsletterSubmit);
+    setupSmoothScroll();
+    setupContactForm();
+    setupNewsletter();
+    setupLightboxEvents();
+    setupMobileMenu();
 });
+
+function setupLightboxEvents() {
+    const mainImg = document.getElementById('modal-main-img');
+    if (mainImg) {
+        mainImg.addEventListener('click', () => {
+            openLightbox(mainImg.src);
+        });
+    }
+
+    if (closeLightbox) closeLightbox.addEventListener('click', closeLightboxFunc);
+    if (btnZoomToggle) btnZoomToggle.addEventListener('click', toggleLightboxZoom);
+
+    if (lightboxImg) {
+        lightboxImg.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleLightboxZoom(e);
+        });
+        lightboxImg.addEventListener('mousemove', (e) => requestAnimationFrame(() => handleZoomMove(e)));
+        lightboxImg.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            requestAnimationFrame(() => handleZoomMove(e));
+        }, { passive: false });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightboxFunc();
+        });
+    }
+}
+
+function openLightbox(src) {
+    if (!lightbox) return;
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+    requestAnimationFrame(() => { lightbox.classList.add('active'); });
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightboxFunc() {
+    lightbox.classList.remove('active');
+    setTimeout(() => {
+        lightbox.style.display = 'none';
+        lightboxImg.classList.remove('zoomed');
+        lightboxImg.style.transformOrigin = 'center center';
+        if (btnZoomToggle) btnZoomToggle.classList.remove('active');
+    }, 300);
+}
+
+function toggleLightboxZoom(e) {
+    e.stopPropagation();
+    lightboxImg.classList.toggle('zoomed');
+    btnZoomToggle.classList.toggle('active');
+    if (!lightboxImg.classList.contains('zoomed')) {
+        lightboxImg.style.transformOrigin = 'center center';
+    }
+}
+
+function handleZoomMove(e) {
+    if (!lightboxImg.classList.contains('zoomed')) return;
+    let clientX, clientY;
+    if (e.type === 'touchmove' || e.type === 'touchstart') {
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY;
+    } else {
+        clientX = e.clientX;
+        clientY = e.clientY;
+    }
+    const rect = lightboxImg.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+    const xPercent = (x / rect.width) * 100;
+    const yPercent = (y / rect.height) * 100;
+    lightboxImg.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+}
 
 function renderCars(cars) {
     if (!carsGrid) return; 
-
     carsGrid.innerHTML = '';
-    
     if (cars.length === 0) {
         carsGrid.innerHTML = `
-            <div class="no-results" style="text-align:center; color:white; grid-column:1/-1; padding: 60px;">
+            <div style="text-align:center; color:white; grid-column:1/-1; padding: 60px;">
                 <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 20px; color: var(--gold);"></i>
                 <h3 style="margin-bottom: 10px;">No se encontraron vehículos</h3>
-                <p style="color: var(--gray-light);">Intenta con otros filtros de búsqueda.</p>
+                <p style="color: var(--gray-light);">Intenta con otros filtros.</p>
             </div>
         `;
         return;
     }
-
+    const fragment = document.createDocumentFragment();
     cars.forEach((car, index) => {
-        setTimeout(() => {
-            const card = createCarCard(car);
-            carsGrid.appendChild(card);
-        }, index * 100);
+        const card = createCarCard(car);
+        card.style.animationDelay = `${index * 0.05}s`;
+        fragment.appendChild(card);
     });
+    carsGrid.appendChild(fragment);
 }
 
 function createCarCard(car) {
     const card = document.createElement('div');
     card.className = 'car-card';
-    card.style.animationDelay = `${car.id * 0.1}s`;
-    
-    const isNew = car.year >= 2023;
+    const isNew = car.year >= 2024;
     const imagePath = `images/${car.imageBase}1${car.imageExtension}`;
-    
     card.innerHTML = `
         ${isNew ? '<div class="car-badge">NUEVO</div>' : ''}
         <div class="car-image-container">
-            <img src="${imagePath}" 
-                 alt="${car.brand} ${car.model}" 
-                 loading="lazy">
+            <img src="${imagePath}" alt="${car.brand} ${car.model}" loading="lazy" decoding="async">
         </div>
         <div class="car-details">
             <span class="car-brand">${car.brand}</span>
@@ -390,300 +196,247 @@ function createCarCard(car) {
 
 function filterCars() {
     if (!carsGrid) return; 
-
     const brandValue = brandFilter.value;
     const priceValue = priceFilter.value;
     const sortValue = sortFilter.value;
-
     let filtered = carsData.filter(car => {
         const matchBrand = brandValue === 'all' || car.brand === brandValue;
-        
         let matchPrice = true;
         const price = parseFloat(car.price);
         if (priceValue === 'low') matchPrice = price < 5;
         else if (priceValue === 'mid') matchPrice = price >= 5 && price <= 10;
         else if (priceValue === 'high') matchPrice = price > 10;
-
         return matchBrand && matchPrice;
     });
-
     if (sortValue !== 'default') {
         filtered.sort((a, b) => {
             const priceA = parseFloat(a.price);
             const priceB = parseFloat(b.price);
-            
             switch(sortValue) {
                 case 'price-asc': return priceA - priceB;
                 case 'price-desc': return priceB - priceA;
                 case 'year-desc': return b.year - a.year;
-                case 'year-asc': return a.year - b.year;
                 default: return 0;
             }
         });
     }
-
     renderCars(filtered);
 }
 
 window.openModal = function(id) {
     if (!modal) return; 
-
     const car = carsData.find(c => c.id === id);
     if (!car) return;
-
     const images = [];
     for (let i = 1; i <= car.totalImages; i++) {
         images.push(`images/${car.imageBase}${i}${car.imageExtension}`);
     }
-
     const mainImg = document.getElementById('modal-main-img');
-    mainImg.src = images[0];    
+    mainImg.src = images[0];
+    mainImg.classList.remove('zoomed');
+    mainImg.style.transformOrigin = 'center center';
     document.getElementById('modal-title').innerText = `${car.brand} ${car.model}`;
     document.getElementById('modal-price').innerText = `$${car.price} ${car.priceUnit}`;
-    
-    const specsContainer = document.getElementById('modal-specs');
-    specsContainer.innerHTML = `
+    const specsHTML = `
         <div class="spec-item"><span>Año</span><strong>${car.year}</strong></div>
         <div class="spec-item"><span>Kilómetros</span><strong>${car.kilometers} km</strong></div>
-        <div class="spec-item"><span>Color Exterior</span><strong>${car.exteriorColor}</strong></div>
-        <div class="spec-item"><span>Color Interior</span><strong>${car.interiorColor}</strong></div>
+        <div class="spec-item"><span>Exterior</span><strong>${car.exteriorColor}</strong></div>
+        <div class="spec-item"><span>Interior</span><strong>${car.interiorColor}</strong></div>
         <div class="spec-item"><span>Motor</span><strong>${car.specs.motor}</strong></div>
         <div class="spec-item"><span>Potencia</span><strong>${car.specs.potencia}</strong></div>
-        <div class="spec-item"><span>Aceleración 0-100</span><strong>${car.specs.aceleracion}</strong></div>
-        <div class="spec-item"><span>Velocidad Máxima</span><strong>${car.specs.velocidadMax}</strong></div>
+        <div class="spec-item"><span>Aceleración</span><strong>${car.specs.aceleracion}</strong></div>
+        <div class="spec-item"><span>Velocidad Máx</span><strong>${car.specs.velocidadMax}</strong></div>
     `;
-
-    const featuresList = document.getElementById('modal-features');
-    featuresList.innerHTML = car.features.map(f => `<li>${f}</li>`).join('');
-
-    const thumbnailsContainer = document.getElementById('modal-thumbnails');
-    thumbnailsContainer.innerHTML = images.map((img, index) => `
-        <img src="${img}" 
-             onclick="changeModalImage('${img}', this)" 
-             class="${index === 0 ? 'active' : ''}"
-             alt="${car.brand} ${car.model} - Vista ${index + 1}">
+    document.getElementById('modal-specs').innerHTML = specsHTML;
+    document.getElementById('modal-features').innerHTML = car.features.map(f => `<li>${f}</li>`).join('');
+    document.getElementById('modal-thumbnails').innerHTML = images.map((img, index) => `
+        <img src="${img}" onclick="changeModalImage('${img}', this)" class="${index === 0 ? 'active' : ''}" alt="Vista previa" loading="lazy">
     `).join('');
-
     const whatsappBtn = document.getElementById('modal-whatsapp');
-    const message = `Hola, estoy interesado en el ${car.brand} ${car.model} ${car.year} por $${car.price} ${car.priceUnit}. ¿Podrían darme más información?`;
-    
-    const NUMERO_DIRECTO = "+525539735554"; 
-    const whatsappUrl = `https://wa.me/${NUMERO_DIRECTO}?text=${encodeURIComponent(message)}`;
-
-    whatsappBtn.href = whatsappUrl;
-    whatsappBtn.target = "_blank";
-    
+    const message = `Hola, estoy interesado en el ${car.brand} ${car.model} ${car.year} por $${car.price} ${car.priceUnit}.`;
+    whatsappBtn.href = `https://wa.me/${NUMERO_DIRECTO}?text=${encodeURIComponent(message)}`;
     modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
+    if (!lightbox || lightbox.style.display === 'none') {
+        document.body.style.overflow = 'hidden'; 
+    }
 }
 
 window.changeModalImage = function(src, element) {
     const mainImg = document.getElementById('modal-main-img');
+    mainImg.style.opacity = '0.7';
     mainImg.src = src;
-    
+    setTimeout(() => { mainImg.style.opacity = '1'; }, 100);
+    mainImg.classList.remove('zoomed');
+    mainImg.style.transformOrigin = 'center center';
     document.querySelectorAll('.gallery-thumbnails img').forEach(img => img.classList.remove('active'));
     element.classList.add('active');
 }
 
-if (closeModalBtns) {
-    closeModalBtns.forEach(btn => {
-        btn.onclick = function() {
-            const modal = this.closest('.modal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        };
+function setupSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
     });
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', () => {
+            const target = document.querySelector('#ubicacion') || document.querySelector('#catalogo');
+            if(target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
 }
 
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-        document.body.style.overflow = 'auto';
+function setupContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactSubmit);
+    }
+    if (closeModalBtns) {
+        closeModalBtns.forEach(btn => {
+            btn.onclick = function() {
+                this.closest('.modal').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            };
+        });
+    }
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
     }
 }
 
 function handleContactSubmit(e) {
     e.preventDefault();
     const form = e.target;
-    
-    const inputs = form.querySelectorAll('input, textarea, select');
-    let isValid = true;
-    
-    inputs.forEach(input => {
-        if (input.hasAttribute('required') && !input.value.trim()) {
-            isValid = false;
-            input.style.borderColor = '#f44336';
-        } else {
-            input.style.borderColor = '';
-        }
-    });
-    
-    if (!isValid) {
-        showNotification("Por favor completa todos los campos requeridos.", "error");
+    if(!form.checkValidity()) {
+        showNotification("Por favor completa los campos requeridos.", "error");
         return;
     }
-    
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando...';
     submitBtn.disabled = true;
-    
+    const nombre = form.querySelector('input[placeholder="Nombre Completo"]').value;
+    const correo = form.querySelector('input[placeholder="Correo Electrónico"]').value;
+    const telefono = form.querySelector('input[placeholder="Teléfono (10 dígitos)"]').value;
+    const selectInteres = document.getElementById('car-interest');
+    const autoInteres = selectInteres.options[selectInteres.selectedIndex].text;
+    const mensajeUsuario = form.querySelector('textarea').value;
+    const textoWhatsapp = `*Hola Global Car* 🏎️%0A%0A👤 *Nombre:* ${nombre}%0A📧 *Correo:* ${correo}%0A📱 *Tel:* ${telefono}%0A🚗 *Interés:* ${autoInteres}%0A💬 *Mensaje:* ${mensajeUsuario}`;
     setTimeout(() => {
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        const baseUrl = isMobile ? "https://api.whatsapp.com/send" : "https://web.whatsapp.com/send";
+        window.open(`${baseUrl}?phone=${NUMERO_DIRECTO}&text=${textoWhatsapp}`, '_blank');
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
         form.reset();
-        showNotification("¡Solicitud enviada exitosamente! Te contactaremos pronto.", "success");
-    }, 1500);
+        showNotification("¡Abriendo WhatsApp!", "success");
+    }, 800);
 }
 
-function handleNewsletterSubmit(e) {
-    e.preventDefault();
-    const input = this.parentElement.querySelector('input');
-    const email = input.value.trim();
-    
-    if (!email || !validateEmail(email)) {
-        showNotification("Por favor ingresa un email válido.", "error");
-        return;
+function setupNewsletter() {
+    const newsletterBtn = document.querySelector('.newsletter-input button');
+    if (newsletterBtn) {
+        newsletterBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const input = this.parentElement.querySelector('input');
+            if (input.value.includes('@')) {
+                showNotification("¡Gracias por suscribirte!", "success");
+                input.value = '';
+            } else {
+                showNotification("Ingresa un correo válido", "error");
+            }
+        });
     }
-    
-    input.value = '';
-    showNotification("¡Gracias por suscribirte al Newsletter de Global Car!", "success");
 }
 
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        const icon = hamburger.querySelector('i');
-        if (navLinks.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-            document.body.style.overflow = 'hidden';
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-            document.body.style.overflow = 'auto';
-        }
-    });
+function setupMobileMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+                document.body.style.overflow = 'hidden';
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    }
 }
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        const icon = hamburger.querySelector('i');
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-        document.body.style.overflow = 'auto';
-    });
-});
 
 let lastScroll = 0;
+let ticking = false;
 window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            updateNavbar();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+function updateNavbar() {
     const header = document.getElementById('navbar');
-    const scrollIndicator = document.querySelector('.scroll-indicator');
     const currentScroll = window.pageYOffset;
-    
     if (currentScroll > 100) {
         header.style.backgroundColor = 'rgba(10, 10, 10, 0.98)';
         header.style.backdropFilter = 'blur(10px)';
         header.style.padding = '15px 0';
         header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.3)';
-        header.style.borderBottom = '1px solid rgba(201, 167, 77, 0.1)'; 
-        
         if (currentScroll > lastScroll && currentScroll > 200) {
             header.style.transform = 'translateY(-100%)';
         } else {
             header.style.transform = 'translateY(0)';
         }
     } else {
-        header.style.backgroundColor = 'transparent'; 
+        header.style.backgroundColor = 'transparent';
         header.style.backdropFilter = 'none';
         header.style.padding = '20px 0';
         header.style.boxShadow = 'none';
-        header.style.borderBottom = 'none'; 
         header.style.transform = 'translateY(0)';
     }
-    
-    if (scrollIndicator) {
-        if (currentScroll > 100) {
-            scrollIndicator.style.opacity = '0';
-            scrollIndicator.style.visibility = 'hidden';
-        } else {
-            scrollIndicator.style.opacity = '1';
-            scrollIndicator.style.visibility = 'visible';
-        }
-    }
-    
     lastScroll = currentScroll;
-});
+}
 
 function showNotification(message, type = "success") {
     const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    
-    const icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
-    
-    notification.innerHTML = `
-        <i class="fas ${icon}"></i>
-        <span>${message}</span>
-    `;
-    
     notification.style.cssText = `
-        position: fixed;
-        top: 30px;
-        right: 30px;
-        background: ${type === 'success' ? 'rgba(76, 175, 80, 0.95)' : 'rgba(244, 67, 54, 0.95)'};
-        color: white;
-        padding: 20px 25px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        z-index: 3000;
-        box-shadow: var(--shadow);
-        animation: slideInRight 0.3s ease forwards;
-        max-width: 400px;
-        backdrop-filter: blur(10px);
+        position: fixed; top: 90px; right: 20px; 
+        background: ${type === 'success' ? '#4CAF50' : '#f44336'}; 
+        color: white; padding: 15px 25px; border-radius: 8px; 
+        z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        font-family: sans-serif; animation: slideIn 0.3s ease;
     `;
-    
-    if (!document.querySelector('#notification-styles')) {
-        const style = document.createElement('style');
-        style.id = 'notification-styles';
-        style.textContent = `
-            @keyframes slideInRight {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-            @keyframes slideOutRight {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-    
+    notification.innerHTML = `<i class="fas ${type === 'success' ? 'fa-check' : 'fa-exclamation'}"></i> ${message}`;
     document.body.appendChild(notification);
-    
     setTimeout(() => {
-        notification.style.animation = 'slideOutRight 0.3s ease forwards';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        }, 300);
-    }, 5000);
+        notification.style.opacity = '0';
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
 }
 
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
-document.addEventListener('contextmenu', function(e) {
-    if (e.target.tagName === 'IMG' && e.target.closest('.car-card, .modal-gallery')) {
-        e.preventDefault();
-        showNotification("Las imágenes están protegidas.", "info");
-    }
+document.addEventListener('contextmenu', e => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
 });

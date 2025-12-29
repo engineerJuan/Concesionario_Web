@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Car - Autos Exclusivos</title>
+    <meta name="description" content="Venta de autos exóticos y de lujo en Metepec. Lamborghini, Ferrari, Porsche.">
+    <meta name="theme-color" content="#c9a74d">
+    <meta property="og:title" content="Global Car | Autos Exclusivos">
+    <meta property="og:image" content="images/lamborghiniUrus1.webp">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -11,7 +16,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <div class="background-decorations">
         <div class="bg-circle bg-circle-1"></div>
         <div class="bg-circle bg-circle-2"></div>
@@ -54,7 +58,7 @@
                     <i class="fas fa-tachometer-alt"></i>
                     <div>
                         <span class="stat-number">+1,000</span>
-                        <span class="stat-label">Caballos de Fuerza</span>
+                        <span class="stat-label">HP</span>
                     </div>
                 </div>
                 <div class="stat-item">
@@ -69,7 +73,6 @@
                 <i class="fas fa-search"></i> Ver Inventario
             </a>
         </div>
-        
         <div class="scroll-indicator">
             <i class="fas fa-chevron-down"></i>
         </div>
@@ -80,9 +83,8 @@
             <div class="section-header">
                 <center><h2>Nuestra <span class="text-gold">Ubicación</span></h2></center>
                 <div class="divider"></div>
-                <p class="section-subtitle">Visítanos en nuestro Ubicación en Metepec</p>
+                <p class="section-subtitle">Visítanos en nuestra sede en Metepec</p>
             </div>
-            
             <div class="location-content">
                 <div class="location-info">
                     <div class="info-box">
@@ -111,11 +113,10 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="location-map">
                     <div class="map-container">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.218576426946!2d-99.60428592478335!3d19.27289698197177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8a38b8c660f5%3A0x6296333966567222!2sBlvd.%20Toluca-Metepec%20234%20Nte%2C%20Santa%20Cruz%2C%2052140%20Metepec%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.6560096831113!2d-99.62016132479015!3d19.253817881987715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8beb2e037b8f%3A0x3a5e83e2486b4f25!2sGlobal%20Car!5e0!3m2!1ses-419!2smx!4v1766976218654!5m2!1ses-419!2smx" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
@@ -139,31 +140,14 @@
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3><i class="fas fa-crown"></i> Experiencia Global Car</h3>
+                    <p style="color: var(--gray-light); margin-bottom: 20px;">Déjenos sus datos en el formulario y un asesor especializado se pondrá en contacto con usted a la brevedad.</p>
                     <ul>
                         <li><i class="fas fa-check-circle"></i> Asesoría personalizada de compra</li>
                         <li><i class="fas fa-check-circle"></i> Pruebas de manejo privadas</li>
                         <li><i class="fas fa-check-circle"></i> Financiamiento exclusivo</li>
                         <li><i class="fas fa-check-circle"></i> Trámites vehiculares incluidos</li>
-                        <li><i class="fas fa-check-circle"></i> Garantía </li>
+                        <li><i class="fas fa-check-circle"></i> Garantía extendida</li>
                     </ul>
-                    
-                    <div class="contact-methods">
-                        <h4><i class="fas fa-headset"></i> Canales de Atención</h4>
-                        <div class="method-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <div>
-                                <strong>WhatsApp</strong>
-                                <p>+52 55 3973 5554</p>
-                            </div>
-                        </div>
-                        <div class="method-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>Correo Electrónico</strong>
-                                <p>globalcar@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 
                 <form id="contact-form" class="contact-form">
@@ -217,8 +201,6 @@
             <div class="footer-col">
                 <h3>Visítanos</h3>
                 <p><i class="fas fa-map-marker-alt"></i> Blvd. Toluca-Metepec 234 Nte</p>
-                <p><i class="fas fa-phone"></i> +52 55 3973 5554</p>
-                <p><i class="fas fa-envelope"></i> globalcar@gmail.com</p>
             </div>
             <div class="footer-col">
                 <h3>Redes Sociales</h3>
@@ -236,6 +218,44 @@
             </div>
         </div>
     </footer>
+
+    <div id="car-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <img src="" alt="Auto Detalle" id="modal-main-img">
+                    <div class="gallery-thumbnails" id="modal-thumbnails"></div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Nombre del Auto</h2>
+                    <p class="modal-price" id="modal-price">$0</p>
+                    <div class="specs-grid" id="modal-specs"></div>
+                    <div class="luxury-features">
+                        <h3>Detalles</h3>
+                        <ul id="modal-features"></ul>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="#" class="btn btn-outline" id="modal-whatsapp" style="width: 100%; justify-content: center;">
+                            <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fullscreen-lightbox" class="lightbox">
+        <span class="close-lightbox">×</span>
+        <div class="lightbox-content">
+            <img src="" id="lightbox-img" alt="Vista Completa">
+            <div class="lightbox-controls">
+                <button id="btn-zoom-toggle" class="btn-icon">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

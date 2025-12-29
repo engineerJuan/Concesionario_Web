@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - Global Car</title>
+    
+    <meta name="description" content="Inventario Global Car. Autos disponibles en Metepec.">
+    <meta name="theme-color" content="#c9a74d">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -11,7 +16,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <div class="background-decorations">
         <div class="bg-circle bg-circle-1"></div>
         <div class="bg-circle bg-circle-2"></div>
@@ -41,7 +45,7 @@
 
     <section id="catalogo" class="catalog-section container">
         <div class="section-header">
-            <center><h2> <span class="text-gold">Inventario</span> Disponible</h2></center>
+            <center><h2><span class="text-gold">Inventario</span> Disponible</h2></center>
             <div class="divider"></div>
             <p class="section-subtitle">Vehículos seleccionados para entrega inmediata</p>
         </div>
@@ -91,7 +95,6 @@
             <div class="footer-col">
                 <h3>Visítanos</h3>
                 <p><i class="fas fa-map-marker-alt"></i> Blvd. Toluca-Metepec 234 Nte</p>
-                <p><i class="fas fa-phone"></i> +52 55 3973 5554</p>
             </div>
             <div class="footer-col">
                 <h3>Redes Sociales</h3>
@@ -129,6 +132,18 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fullscreen-lightbox" class="lightbox">
+        <span class="close-lightbox">×</span>
+        <div class="lightbox-content">
+            <img src="" id="lightbox-img" alt="Vista Completa">
+            <div class="lightbox-controls">
+                <button id="btn-zoom-toggle" class="btn-icon">
+                    <i class="fas fa-search-plus"></i>
+                </button>
             </div>
         </div>
     </div>
