@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo - Global Car</title>
-    
-    <meta name="description" content="Inventario Global Car. Autos disponibles en Metepec.">
+    <title>Inventario - Iconik CDMX</title>
+    <meta name="description" content="Inventario Iconik CDMX. Autos disponibles en Santa Fe.">
     <meta name="theme-color" content="#c9a74d">
     <link rel="icon" type="image/png" href="images/favicon.png">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -16,7 +15,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="background-decorations">
+    <div class="background-decorations" aria-hidden="true">
         <div class="bg-circle bg-circle-1"></div>
         <div class="bg-circle bg-circle-2"></div>
         <div class="bg-circle bg-circle-3"></div>
@@ -26,97 +25,111 @@
 
     <header id="navbar">
         <div class="container header-content">
-            <a href="index.html" class="logo">Global <span>Car</span></a>
+            <a href="index.html" class="logo">Iconik <span>CDMX</span></a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#" class="text-gold">Inventario</a></li>
+                    <li><a href="#" class="text-gold active">Inventario</a></li>
                     <li><a href="index.html#ubicacion">Ubicación</a></li>
                     <li><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Abrir menú">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </header>
 
-    <div style="height: 100px;"></div>
+    <div class="spacer-nav"></div>
 
-    <section id="catalogo" class="catalog-section container">
-        <div class="section-header">
-            <center><h2><span class="text-gold">Inventario</span> Disponible</h2></center>
-            <div class="divider"></div>
-            <p class="section-subtitle">Vehículos seleccionados para entrega inmediata</p>
-        </div>
+    <main>
+        <section id="catalogo" class="catalog-section container">
+            <div class="section-header text-center">
+                <h2><span class="text-gold">Colección</span> Disponible</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">Vehículos seleccionados para entrega inmediata en Santa Fe</p>
+            </div>
 
-        <div class="filters">
-            <div class="filter-group">
-                <i class="fas fa-filter"></i>
-                <select id="brand-filter">
-                    <option value="all">Todas las Marcas</option>
-                    <option value="Lamborghini">Lamborghini</option>
-                    <option value="Ferrari">Ferrari</option>
-                    <option value="Porsche">Porsche</option>
-                    <option value="Mercedes-Benz">Mercedes-Benz</option>
-                    <option value="BMW">BMW</option>
-                    <option value="Audi">Audi</option>
-                </select>
+            <div class="filters">
+                <div class="filter-group">
+                    <i class="fas fa-filter"></i>
+                    <select id="brand-filter" aria-label="Filtrar por marca">
+                        <option value="all">Todas las Marcas</option>
+                        <option value="Lamborghini">Lamborghini</option>
+                        <option value="Ferrari">Ferrari</option>
+                        <option value="Porsche">Porsche</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option value="Aston Martin">Aston Martin</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <i class="fas fa-dollar-sign"></i>
+                    <select id="price-filter" aria-label="Filtrar por presupuesto">
+                        <option value="all">Filtrar por Presupuesto</option>
+                        <option value="low">Menos de 5 MDP</option>
+                        <option value="mid">5 MDP - 10 MDP</option>
+                        <option value="high">Más de 10 MDP</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <i class="fas fa-sort-amount-down"></i>
+                    <select id="sort-filter" aria-label="Ordenar listado">
+                        <option value="default">Orden: Relevancia</option>
+                        <option value="price-asc">Precio: Menor a Mayor</option>
+                        <option value="price-desc">Precio: Mayor a Menor</option>
+                        <option value="year-desc">Año: Más Nuevos</option>
+                    </select>
+                </div>
             </div>
-            <div class="filter-group">
-                <i class="fas fa-dollar-sign"></i>
-                <select id="price-filter">
-                    <option value="all">Todos los Precios</option>
-                    <option value="low">Menos de 5 MDP</option>
-                    <option value="mid">5 MDP - 10 MDP</option>
-                    <option value="high">Más de 10 MDP</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <i class="fas fa-sort-amount-down"></i>
-                <select id="sort-filter">
-                    <option value="default">Ordenar por</option>
-                    <option value="price-asc">Precio: Menor a Mayor</option>
-                    <option value="price-desc">Precio: Mayor a Menor</option>
-                    <option value="year-desc">Más Nuevos</option>
-                </select>
-            </div>
-        </div>
 
-        <div id="cars-grid" class="cars-grid"></div>
-    </section>
+            <div id="cars-grid" class="cars-grid">
+                </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container footer-content">
             <div class="footer-col">
-                <h3>Global Car</h3>
+                <h3>Iconik CDMX</h3>
                 <p>Especialistas en vehículos exóticos y de alto rendimiento.</p>
             </div>
             <div class="footer-col">
-                <h3>Visítanos</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Blvd. Toluca-Metepec 234 Nte</p>
+                <h3>Ubicación</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Vasco de Quiroga 3880, Santa Fe</p>
             </div>
             <div class="footer-col">
                 <h3>Redes Sociales</h3>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 Global Car. Todos los derechos reservados.</p>
+            <p>© 2026 Iconik CDMX. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <div id="car-modal" class="modal">
+    <div id="car-modal" class="modal" aria-hidden="true">
         <div class="modal-content">
-            <span class="close-modal">×</span>
+            <button class="close-modal" aria-label="Cerrar modal">×</button>
             <div class="modal-body">
                 <div class="modal-gallery">
-                    <img src="" alt="Auto Detalle" id="modal-main-img">
-                    <div class="gallery-thumbnails" id="modal-thumbnails"></div>
+                    <div class="main-image-wrapper">
+                        <button class="nav-arrow prev" onclick="prevImage()" aria-label="Imagen anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <img src="" alt="Detalle del vehículo" id="modal-main-img">
+                        
+                        <button class="nav-arrow next" onclick="nextImage()" aria-label="Siguiente imagen">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnails-container">
+                        <div class="gallery-thumbnails" id="modal-thumbnails"></div>
+                    </div>
                 </div>
                 <div class="modal-info">
                     <h2 id="modal-title">Nombre del Auto</h2>
@@ -127,7 +140,7 @@
                         <ul id="modal-features"></ul>
                     </div>
                     <div class="modal-actions">
-                        <a href="#" class="btn btn-outline" id="modal-whatsapp" style="width: 100%; justify-content: center;">
+                        <a href="#" class="btn btn-outline" id="modal-whatsapp" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
                         </a>
                     </div>
@@ -136,16 +149,25 @@
         </div>
     </div>
 
-    <div id="fullscreen-lightbox" class="lightbox">
-        <span class="close-lightbox">×</span>
+    <div id="fullscreen-lightbox" class="lightbox" aria-hidden="true">
+        <button class="close-lightbox" aria-label="Cerrar vista completa">×</button>
+        
+        <button class="nav-arrow lightbox-prev" id="lightbox-prev-btn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
         <div class="lightbox-content">
-            <img src="" id="lightbox-img" alt="Vista Completa">
+            <img src="" id="lightbox-img" alt="Vista completa">
             <div class="lightbox-controls">
-                <button id="btn-zoom-toggle" class="btn-icon">
+                <button id="btn-zoom-toggle" class="btn-icon" aria-label="Zoom">
                     <i class="fas fa-search-plus"></i>
                 </button>
             </div>
         </div>
+
+        <button class="nav-arrow lightbox-next" id="lightbox-next-btn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
     </div>
 
     <script src="script.js"></script>

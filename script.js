@@ -1,66 +1,62 @@
 const carsData = [
     {
         id: 1,
-        brand: "Lamborghini",
-        model: "Urus Performance",
-        year: 2023,
-        price: "6.8",
+        brand: "Porsche",
+        model: "911 Carrera 2S Coupe",
+        year: 2012,
+        price: "1.65",
         priceUnit: "MDP",
-        kilometers: "5,000",
-        exteriorColor: "Azul",
-        interiorColor: "Negro con Azul",
-        imageBase: "lamborghiniUrus",
+        kilometers: "20,570",
+        exteriorColor: "Negro",
+        interiorColor: "Beige claro",
+        imageBase: "Porsche911CarreraCoupeAt",
         imageExtension: ".webp",
-        totalImages: 6,
+        totalImages: 12,
         specs: {
-            motor: "V8 Twin-Turbo 4.0L",
-            potencia: "666 HP",
-            aceleracion: "3.3s (0-100 km/h)",
-            velocidadMax: "305 km/h",
-            transmision: "Automática 8 velocidades",
-            traccion: "Integral permanente",
-            consumo: "12.7 L/100km"
+            motor: "3.8L Carrera S",
+            potencia: "400 HP",
+            aceleracion: "4.3s (0-100 km/h)",
+            velocidadMax: "302 km/h",
+            transmision: "Automática",
+            traccion: "Trasera",
+            consumo: "N/A"
         },
         features: [
             "Sistema de escape deportivo",
-            "Modos de conducción: STRADA, SPORT, CORSA",
-            "Suspensión neumática adaptativa",
-            "Frenos de cerámica carbono-cerámica",
-            "Sistema de sonido Bang & Olufsen",
-            "Pantalla táctil 10.1''",
-            "Asientos deportivos con calefacción"
+            "Color exterior Negro",
+            "Interior beige claro",
+            "Transmisión Automática",
+            "Rines de aleación"
         ]
     },
     {
         id: 2,
-        brand: "Lamborghini",
-        model: "STO",
-        year: 2023,
-        price: "13.5",
+        brand: "Aston Martin",
+        model: "Vantage",
+        year: 2025,
+        price: "6.4",
         priceUnit: "MDP",
-        kilometers: "1,600",
-        exteriorColor: "Azul",
-        interiorColor: "Amarillo",
-        imageBase: "lamborghiniSto",
+        kilometers: "5,124",
+        exteriorColor: "Negro",
+        interiorColor: "Gris",
+        imageBase: "AstonMartinVantage",
         imageExtension: ".webp",
-        totalImages: 6,
+        totalImages: 12,
         specs: {
-            motor: "V10 Atmosférico 5.2L",
-            potencia: "640 HP",
-            aceleracion: "3.0s",
-            velocidadMax: "310 km/h",
-            transmision: "Automática 7 vel",
+            motor: "4.0L V8 Biturbo",
+            potencia: "665 HP",
+            aceleracion: "3.4s (0-100 km/h)",
+            velocidadMax: "325 km/h",
+            transmision: "Automática",
             traccion: "Trasera",
-            peso: "1,339 kg"
+            consumo: "N/A"
         },
         features: [
-            "Paquete competición",
-            "Aerodinámica activa",
-            "Frenos competición",
-            "Chasis carbono",
-            "Modo pista",
-            "Asientos cubo",
-            "Telemetría"
+            "Sensor de estacionamiento",
+            "Puertas: 3",
+            "Transmisión Automática",
+            "Interior Gris",
+            "Modelo 2025 Reciente"
         ]
     },
     {
@@ -68,223 +64,316 @@ const carsData = [
         brand: "Lamborghini",
         model: "Huracán Tecnica",
         year: 2023,
-        price: "9.3",
+        price: "9.2",
         priceUnit: "MDP",
-        kilometers: "5,000",
-        exteriorColor: "Amarillo",
-        interiorColor: "Amarillo",
-        imageBase: "lamborghiniHuracan",
+        kilometers: "N/A",
+        exteriorColor: "Amarillo (Giallo Inti)",
+        interiorColor: "Nero Ade/Giallo Belenus",
+        imageBase: "LamborghiniHuracánTecnica",
         imageExtension: ".webp",
-        totalImages: 6,
+        totalImages: 12,
         specs: {
-            motor: "V10 Atmosférico 5.2L",
+            motor: "5.2L V10",
             potencia: "640 HP",
-            aceleracion: "3.2s",
+            aceleracion: "3.2s (0-100 km/h)",
             velocidadMax: "325 km/h",
-            transmision: "Automática 7 vel",
+            transmision: "Automática",
             traccion: "Trasera",
-            parMotor: "600 Nm"
+            consumo: "N/A"
         },
         features: [
-            "Sistema LDVI",
-            "Aerodinámica mejorada",
-            "Suspensión magneto-reológica",
-            "Modos conducción",
-            "Escape deportivo",
-            "Rines forjados",
-            "Interior Alcántara"
+            "Rines de 20\" en negro brillante",
+            "Pinzas de freno en color amarillo",
+            "Style package negro brillante",
+            "Cinturones en Giallo Taurus",
+            "Sistema de audio Lamborghini Sensonum",
+            "Lifting system",
+            "Escudo bordado en reposacabezas"
         ]
     },
     {
         id: 4,
-        brand: "Ferrari",
-        model: "296 GTB",
-        year: 2024,
-        price: "10.5",
+        brand: "Porsche",
+        model: "Taycan Turbo S",
+        year: 2021,
+        price: "2.2",
         priceUnit: "MDP",
-        kilometers: "1,500+",
-        exteriorColor: "Azul",
-        interiorColor: "Negro y Amarillo",
-        imageBase: "Ferrari296Gtb",
+        kilometers: "16,730",
+        exteriorColor: "Blanco",
+        interiorColor: "Blanco y Azul",
+        imageBase: "PorscheTaycanTurboS",
         imageExtension: ".webp",
-        totalImages: 6,
+        totalImages: 12,
         specs: {
-            motor: "V6 Twin-Turbo Híbrido",
-            potencia: "830 HP",
-            aceleracion: "2.9s",
-            velocidadMax: "330 km/h",
-            transmision: "Doble embrague 8 vel",
-            potenciaElectrica: "122 kW",
-            autonomiaElectrica: "25 km"
+            motor: "Eléctrico",
+            potencia: "761 HP",
+            aceleracion: "2.8s (0-100 km/h)",
+            velocidadMax: "260 km/h",
+            transmision: "Automática",
+            traccion: "Integral",
+            consumo: "Eléctrico"
         },
         features: [
-            "Híbrido enchufable",
-            "Modo eléctrico puro",
-            "Aerodinámica activa",
-            "Frenos carbono",
-            "Pantalla 16''",
-            "Sonido JBL",
-            "Asientos memoria"
+            "Frenos ABS y Control de estabilidad",
+            "Faros con regulación automática",
+            "Sensor de estacionamiento",
+            "Airbag conductor y pasajero",
+            "Desempañador trasero",
+            "Seguros eléctricos",
+            "Interior bitono blanco y azul"
         ]
     },
     {
         id: 5,
-        brand: "Ferrari",
-        model: "Roma",
-        year: 2021,
-        price: "6.6",
+        brand: "Porsche",
+        model: "Carrera T",
+        year: 2024,
+        price: "2.95",
         priceUnit: "MDP",
-        kilometers: "7,000",
-        exteriorColor: "Gris",
-        interiorColor: "Rojo",
-        imageBase: "FerrariRoma",
+        kilometers: "3,215",
+        exteriorColor: "Rojo",
+        interiorColor: "Negro y Rojo",
+        imageBase: "PorscheCarreraT",
         imageExtension: ".webp",
-        totalImages: 6,
+        totalImages: 12,
         specs: {
-            motor: "V8 Twin-Turbo 3.9L",
-            potencia: "620 HP",
-            aceleracion: "3.4s",
-            velocidadMax: "320 km/h",
-            transmision: "Doble embrague 8 vel",
+            motor: "3.0L Twin-Turbo",
+            potencia: "385 HP",
+            aceleracion: "4.5s (0-100 km/h)",
+            velocidadMax: "291 km/h",
+            transmision: "Manual",
             traccion: "Trasera",
-            consumo: "10.4 L/100km"
+            consumo: "N/A"
         },
         features: [
-            "Diseño GT",
-            "Pantalla 16''",
-            "Sonido premium",
-            "Asientos eléctricos",
-            "Climatizador",
-            "Control crucero",
-            "Cámara reversa"
+            "Transmisión Manual",
+            "Precio negociable",
+            "Sensor de estacionamiento",
+            "Interior negro y rojo",
+            "Puertas: 3"
         ]
     },
     {
         id: 6,
-        brand: "Porsche",
-        model: "GT3 RS",
-        year: 2025,
-        price: "8.5",
+        brand: "Mercedes-Benz",
+        model: "AMG GT Black Series",
+        year: 2021,
+        price: "10.5",
         priceUnit: "MDP",
-        kilometers: "700",
-        exteriorColor: "Rojo carbono",
-        interiorColor: "Negro y Rojo",
-        imageBase: "PorscheGt3Rs",
+        kilometers: "4,110",
+        exteriorColor: "Negro Obsidiana",
+        interiorColor: "Simil cuero artico",
+        imageBase: "MercedesBenzGTAt",
         imageExtension: ".webp",
-        totalImages: 6,
+        totalImages: 12,
         specs: {
-            motor: "Flat-6 Atmosférico 4.0L",
-            potencia: "525 HP",
-            aceleracion: "3.2s",
-            velocidadMax: "296 km/h",
-            transmision: "PDK 7 vel",
+            motor: "4.0L V8 Biturbo",
+            potencia: "730 HP",
+            aceleracion: "3.2s (0-100 km/h)",
+            velocidadMax: "325 km/h",
+            transmision: "Automática",
             traccion: "Trasera",
-            rpmMax: "9,000"
+            consumo: "N/A"
         },
         features: [
-            "Paquete Weissach",
-            "Suspensión doble horquilla",
-            "Frenos PCCB",
-            "Rines magnesio",
-            "Asientos carbono",
-            "Jaula seguridad",
-            "Telemetría"
+            "Costuras y logos AMG naranja",
+            "Faros led high performance",
+            "Rines AMG aleación",
+            "Molduras fibra de carbono",
+            "Jaula antivuelco",
+            "Consola central con AMG drive",
+            "Diseño inspirado en GT3"
         ]
     },
     {
         id: 7,
-        brand: "McLaren",
-        model: "765LT",
-        year: 2021,
-        price: "11.2",
+        brand: "Lamborghini",
+        model: "Urus S",
+        year: 2023,
+        price: "6.35",
         priceUnit: "MDP",
-        kilometers: "1,300+",
-        exteriorColor: "Gris carbono",
-        interiorColor: "Negro Naranja",
-        imageBase: "Mclaren765lt",
+        kilometers: "6,121",
+        exteriorColor: "Verde Turbine",
+        interiorColor: "Nero ade costuras bianco",
+        imageBase: "LamborghiniUrusV8SAt",
         imageExtension: ".webp",
-        totalImages: 6,
+        totalImages: 12,
         specs: {
-            motor: "V8 Twin-Turbo 4.0L",
-            potencia: "765 HP",
-            aceleracion: "2.8s",
-            velocidadMax: "330 km/h",
-            transmision: "Doble embrague 7 vel",
-            traccion: "Trasera",
-            parMotor: "800 Nm"
+            motor: "4.0L V8 Biturbo",
+            potencia: "666 HP",
+            aceleracion: "3.5s (0-100 km/h)",
+            velocidadMax: "305 km/h",
+            transmision: "Automática",
+            traccion: "Integral",
+            consumo: "N/A"
         },
         features: [
-            "Paquete Longtail",
-            "Aerodinámica",
-            "Escape titanio",
-            "Frenos cerámica",
-            "Chasis monocasco",
-            "Suspensión hidráulica",
-            "Modos conducción"
+            "Rines de 23\" bronce diamante",
+            "Techo panorámico",
+            "Style package color carrocería",
+            "Salidas de escape negro mate",
+            "Sistema audio 3D Bang&Olufsen",
+            "Puertas cierre soft close",
+            "Escudo bordado en cabeceras"
         ]
     },
     {
         id: 8,
-        brand: "Rolls-Royce",
-        model: "Cullinan",
-        year: 2023,
-        price: "12.9",
+        brand: "Ferrari",
+        model: "296 GTB",
+        year: 2024,
+        price: "10.7",
         priceUnit: "MDP",
-        kilometers: "308",
-        exteriorColor: "Blanco",
-        interiorColor: "Blanco Morado",
-        imageBase: "RollsRoyceCullinan",
+        kilometers: "1,571",
+        exteriorColor: "Azul (Blu Corsa)",
+        interiorColor: "Negro y Amarillo",
+        imageBase: "Ferrari296Gtb",
         imageExtension: ".webp",
-        totalImages: 6,
+        totalImages: 12,
         specs: {
-            motor: "V12 Twin-Turbo 6.75L",
-            potencia: "571 HP",
-            aceleracion: "5.2s",
-            velocidadMax: "250 km/h",
-            transmision: "Automática 8 vel",
-            traccion: "Integral",
-            consumo: "15.0 L/100km"
+            motor: "V6 Híbrido 3.0L",
+            potencia: "830 HP",
+            aceleracion: "2.9s (0-100 km/h)",
+            velocidadMax: "330 km/h",
+            transmision: "Automática",
+            traccion: "Trasera",
+            consumo: "N/A"
         },
         features: [
-            "Techo Starlight",
-            "Suspensión Magic Carpet",
-            "Sonido Bespoke",
-            "Asientos masaje",
-            "Madera veneciana",
-            "Pantallas traseras",
-            "Clima 4 zonas"
+            "Apple Carplay",
+            "Lifting system",
+            "Calipers amarillo",
+            "Cinturones amarillo",
+            "Asientos cuero detalles amarillo",
+            "Asientos totalmente eléctricos",
+            "Escudo bordado en cabeceras"
         ]
     },
     {
         id: 9,
-        brand: "Mercedes-Benz",
-        model: "AMG GTR",
-        year: 2021,
-        price: "3.9",
+        brand: "Lamborghini",
+        model: "Urus Performante",
+        year: 2023,
+        price: "6.8",
         priceUnit: "MDP",
-        kilometers: "2,500",
-        exteriorColor: "Gris carbono",
-        interiorColor: "Negro",
-        imageBase: "MercedesBenzGtr",
+        kilometers: "5,175",
+        exteriorColor: "Azul",
+        interiorColor: "Negro y Azul",
+        imageBase: "LamborghiniUrusV8PerformanteAt",
         imageExtension: ".webp",
-        totalImages: 6,
+        totalImages: 12,
         specs: {
-            motor: "V8 Biturbo 4.0L",
-            potencia: "585 HP",
-            aceleracion: "3.6s",
-            velocidadMax: "318 km/h",
-            transmision: "Automática 7 vel",
-            traccion: "Trasera",
-            parMotor: "700 Nm"
+            motor: "4.0L V8 Biturbo",
+            potencia: "666 HP",
+            aceleracion: "3.3s (0-100 km/h)",
+            velocidadMax: "306 km/h",
+            transmision: "Automática",
+            traccion: "Integral",
+            consumo: "N/A"
         },
         features: [
-            "Paquete AMG Performance",
+            "Versión Performante",
+            "Transmisión Automática",
+            "Interior Negro y Azul",
+            "Suspensión deportiva",
             "Aerodinámica activa",
-            "Suspensión AMG RIDE",
-            "Frenos cerámicos",
-            "Rines forjados",
-            "Cuero Nappa",
-            "Sonido Burmester"
+            "Uso ligero de fibra de carbono"
+        ]
+    },
+    {
+        id: 10,
+        brand: "Aston Martin",
+        model: "DBX",
+        year: 2022,
+        price: "4.9",
+        priceUnit: "MDP",
+        kilometers: "4,501",
+        exteriorColor: "Gris (Solid China Grey)",
+        interiorColor: "Negro Onyx con Oxford Tan",
+        imageBase: "AstonMartinDbx",
+        imageExtension: ".webp",
+        totalImages: 12,
+        specs: {
+            motor: "4.0L V8 Biturbo",
+            potencia: "550 HP",
+            aceleracion: "4.5s (0-100 km/h)",
+            velocidadMax: "291 km/h",
+            transmision: "Automática",
+            traccion: "Integral",
+            consumo: "N/A"
+        },
+        features: [
+            "Rines 23\" Forged Negro Satin",
+            "Calipers Vivid Orange",
+            "Paquete exterior negro brillante",
+            "Parrilla negra y calaveras ahumadas",
+            "Incrustaciones Negro Piano",
+            "Vidrio trasero privacidad",
+            "SUV de ultra lujo"
+        ]
+    },
+    {
+        id: 11,
+        brand: "Ferrari",
+        model: "296 GTB",
+        year: 2023,
+        price: "10.9",
+        priceUnit: "MDP",
+        kilometers: "2,997",
+        exteriorColor: "Rojo",
+        interiorColor: "Cuero",
+        imageBase: "Ferrari296GtbRojo",
+        imageExtension: ".webp",
+        totalImages: 12,
+        specs: {
+            motor: "V6 Híbrido 3.0L",
+            potencia: "830 HP",
+            aceleracion: "2.9s (0-100 km/h)",
+            velocidadMax: "330 km/h",
+            transmision: "Automática",
+            traccion: "Trasera",
+            consumo: "N/A"
+        },
+        features: [
+            "Apple Carplay",
+            "Lifting System",
+            "Calipers Rojos",
+            "Cavallino bordado en asientos",
+            "Cámara 360",
+            "Cargador inalámbrico",
+            "Full Xpel (Protección)",
+            "Sensores delanteros y traseros"
+        ]
+    },
+    {
+        id: 12,
+        brand: "Aston Martin",
+        model: "Vantage V8",
+        year: 2019,
+        price: "3.45",
+        priceUnit: "MDP",
+        kilometers: "9,523",
+        exteriorColor: "Negro",
+        interiorColor: "Negro",
+        imageBase: "AstonMartinVantageV8At",
+        imageExtension: ".webp",
+        totalImages: 12,
+        specs: {
+            motor: "4.0L V8 Biturbo",
+            potencia: "503 HP",
+            aceleracion: "3.6s (0-100 km/h)",
+            velocidadMax: "314 km/h",
+            transmision: "Automática",
+            traccion: "Trasera",
+            consumo: "N/A"
+        },
+        features: [
+            "Vehículo verificado CARFAX",
+            "Llantas de aleación",
+            "Sistema de sonido Premium",
+            "Aire acondicionado y climatizador",
+            "Computadora de abordo",
+            "Diseño Coupé deportivo"
         ]
     }
 ];
@@ -300,6 +389,10 @@ const lightbox = document.getElementById('fullscreen-lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const btnZoomToggle = document.getElementById('btn-zoom-toggle');
 const closeLightbox = document.querySelector('.close-lightbox');
+
+let currentModalImages = [];
+let currentImageIndex = 0;
+let currentCarData = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     if (carsGrid) {
@@ -351,6 +444,33 @@ function setupLightboxEvents() {
             if (e.target === lightbox) {
                 closeLightboxFunc();
             }
+        });
+    }
+
+    const lightboxPrev = document.getElementById('lightbox-prev-btn');
+    const lightboxNext = document.getElementById('lightbox-next-btn');
+    
+    if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentImageIndex--;
+            if (currentImageIndex < 0) {
+                currentImageIndex = currentModalImages.length - 1;
+            }
+            lightboxImg.src = currentModalImages[currentImageIndex];
+            updateModalMainImage();
+        });
+    }
+    
+    if (lightboxNext) {
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentImageIndex++;
+            if (currentImageIndex >= currentModalImages.length) {
+                currentImageIndex = 0;
+            }
+            lightboxImg.src = currentModalImages[currentImageIndex];
+            updateModalMainImage();
         });
     }
 }
@@ -510,19 +630,21 @@ window.openModal = function(id) {
     const car = carsData.find(c => c.id === id);
     if (!car) return;
     
-    const images = [];
-    for (let i = 1; i <= car.totalImages; i++) {
-        images.push(`images/${car.imageBase}${i}${car.imageExtension}`);
-    }
+    currentCarData = car;
     
-    const mainImg = document.getElementById('modal-main-img');
-    mainImg.src = images[0];
-    mainImg.classList.remove('zoomed');
-    mainImg.style.transformOrigin = 'center center';
+    currentModalImages = [];
+    for (let i = 1; i <= car.totalImages; i++) {
+        currentModalImages.push(`images/${car.imageBase}${i}${car.imageExtension}`);
+    }
+    currentImageIndex = 0;
+
+    updateModalMainImage();
     
     document.getElementById('modal-title').innerText = `${car.brand} ${car.model}`;
     document.getElementById('modal-price').innerText = `$${car.price} ${car.priceUnit}`;
     
+    renderThumbnails();
+
     const specsHTML = `
         <div class="spec-item"><span>Año</span><strong>${car.year}</strong></div>
         <div class="spec-item"><span>Kilómetros</span><strong>${car.kilometers} km</strong></div>
@@ -534,37 +656,68 @@ window.openModal = function(id) {
         <div class="spec-item"><span>Velocidad Máx</span><strong>${car.specs.velocidadMax}</strong></div>
     `;
     document.getElementById('modal-specs').innerHTML = specsHTML;
+
     document.getElementById('modal-features').innerHTML = car.features.map(f => `<li>${f}</li>`).join('');
-    document.getElementById('modal-thumbnails').innerHTML = images.map((img, index) => `
-        <img src="${img}" onclick="changeModalImage('${img}', this)" class="${index === 0 ? 'active' : ''}" alt="Vista previa" loading="lazy">
-    `).join('');
     
     const whatsappBtn = document.getElementById('modal-whatsapp');
-    const message = `Hola, estoy interesado en el ${car.brand} ${car.model} ${car.year} por $${car.price} ${car.priceUnit}.`;
-    whatsappBtn.href = `https://wa.me/${NUMERO_DIRECTO}?text=${encodeURIComponent(message)}`;
-    
+    const message = `Hola, me interesa el ${car.brand} ${car.model} (${car.year}) que vi en su inventario.`;
+    if(whatsappBtn) {
+        whatsappBtn.href = `https://wa.me/${NUMERO_DIRECTO}?text=${encodeURIComponent(message)}`;
+    }
+
     modal.style.display = 'block';
     if (!lightbox || lightbox.style.display === 'none') {
         document.body.style.overflow = 'hidden';
     }
 }
 
-window.changeModalImage = function(src, element) {
+function updateModalMainImage() {
     const mainImg = document.getElementById('modal-main-img');
-    mainImg.style.opacity = '0.7';
-    mainImg.src = src;
+    mainImg.style.opacity = '0.8';
+    mainImg.src = currentModalImages[currentImageIndex];
     
     setTimeout(() => {
         mainImg.style.opacity = '1';
-    }, 100);
-    
-    mainImg.classList.remove('zoomed');
-    mainImg.style.transformOrigin = 'center center';
-    
-    document.querySelectorAll('.gallery-thumbnails img').forEach(img => {
-        img.classList.remove('active');
+    }, 150);
+
+    const thumbs = document.querySelectorAll('.gallery-thumbnails img');
+    thumbs.forEach((img, idx) => {
+        if(idx === currentImageIndex) img.classList.add('active');
+        else img.classList.remove('active');
     });
-    element.classList.add('active');
+}
+
+function renderThumbnails() {
+    const container = document.getElementById('modal-thumbnails');
+    container.innerHTML = currentModalImages.map((img, index) => `
+        <img src="${img}" 
+             onclick="setModalImage(${index})" 
+             class="${index === 0 ? 'active' : ''}" 
+             alt="Miniatura" loading="lazy">
+    `).join('');
+}
+
+window.nextImage = function(e) {
+    if(e) e.stopPropagation();
+    currentImageIndex++;
+    if (currentImageIndex >= currentModalImages.length) {
+        currentImageIndex = 0;
+    }
+    updateModalMainImage();
+}
+
+window.prevImage = function(e) {
+    if(e) e.stopPropagation();
+    currentImageIndex--;
+    if (currentImageIndex < 0) {
+        currentImageIndex = currentModalImages.length - 1;
+    }
+    updateModalMainImage();
+}
+
+window.setModalImage = function(index) {
+    currentImageIndex = index;
+    updateModalMainImage();
 }
 
 function setupSmoothScroll() {
@@ -636,7 +789,7 @@ function handleContactSubmit(e) {
     const autoInteres = selectInteres.options[selectInteres.selectedIndex].text;
     const mensajeUsuario = form.querySelector('textarea').value;
     
-    const textoWhatsapp = `*Hola Global Car* 🏎️%0A%0A👤 *Nombre:* ${nombre}%0A📧 *Correo:* ${correo}%0A📱 *Tel:* ${telefono}%0A🚗 *Interés:* ${autoInteres}%0A💬 *Mensaje:* ${mensajeUsuario}`;
+    const textoWhatsapp = `*Hola Iconik CDMX* 🏎️%0A%0A👤 *Nombre:* ${nombre}%0A📧 *Correo:* ${correo}%0A📱 *Tel:* ${telefono}%0A🚗 *Interés:* ${autoInteres}%0A💬 *Mensaje:* ${mensajeUsuario}`;
     
     setTimeout(() => {
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
