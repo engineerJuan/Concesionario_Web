@@ -49,26 +49,9 @@ body {
     filter: blur(40px);
 }
 
-.bg-circle-1 {
-    width: 600px;
-    height: 600px; 
-    top: -300px; 
-    right: -200px; 
-}
-
-.bg-circle-2 {
-    width: 400px; 
-    height: 400px; 
-    bottom: -200px; 
-    left: -100px; 
-}
-
-.bg-circle-3 { 
-    width: 300px; 
-    height: 300px; 
-    top: 50%; 
-    left: 10%; 
-}
+.bg-circle-1 { width: 600px; height: 600px; top: -300px; right: -200px; }
+.bg-circle-2 { width: 400px; height: 400px; bottom: -200px; left: -100px; }
+.bg-circle-3 { width: 300px; height: 300px; top: 50%; left: 10%; }
 
 .bg-line {
     position: absolute;
@@ -77,17 +60,8 @@ body {
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
-.bg-line-1 {
-    width: 100%; 
-    top: 30%;
-    left: 0; 
-}
-
-.bg-line-2 {
-    width: 100%;
-    top: 70%; 
-    left: 0; 
-}
+.bg-line-1 { width: 100%; top: 30%; left: 0; }
+.bg-line-2 { width: 100%; top: 70%; left: 0; }
 
 .container {
     max-width: 1200px;
@@ -100,9 +74,7 @@ h1, h2, h3, h4 {
     font-weight: 700;
 }
 
-.text-gold { 
-    color: var(--gold); 
-}
+.text-gold { color: var(--gold); }
 
 .divider {
     width: 60px;
@@ -220,13 +192,8 @@ header {
     transition: var(--transition);
 }
 
-.nav-links a:hover {
-    color: var(--gold); 
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
 
 .hamburger {
     display: none;
@@ -236,9 +203,7 @@ header {
     transition: var(--transition);
 }
 
-.hamburger:hover {
-    color: var(--gold);
-}
+.hamburger:hover { color: var(--gold); }
 
 .hero {
     height: 100vh;
@@ -302,10 +267,7 @@ header {
     border-color: var(--gold);
 }
 
-.stat-item i {
-    font-size: 2rem;
-    color: var(--gold);
-}
+.stat-item i { font-size: 2rem; color: var(--gold); }
 
 .stat-number {
     font-size: 2rem;
@@ -340,10 +302,7 @@ header {
     60% { transform: translateY(-5px) translateX(-50%); }
 }
 
-.catalog-section {
-    padding: 100px 20px;
-    position: relative;
-}
+.catalog-section { padding: 100px 20px; position: relative; }
 
 .filters {
     display: flex;
@@ -364,14 +323,8 @@ header {
     transition: var(--transition);
 }
 
-.filter-group:hover {
-    border-color: 
-    var(--gold);
-}
-
-.filter-group i {
-    color: var(--gold);
-}
+.filter-group:hover { border-color: var(--gold); }
+.filter-group i { color: var(--gold); }
 
 select {
     background-color: transparent;
@@ -385,10 +338,7 @@ select {
     min-width: 180px;
 }
 
-select option {
-    background-color: var(--secondary-black);
-     color: var(--white);
-}
+select option { background-color: var(--secondary-black); color: var(--white); }
 
 .cars-grid {
     display: grid;
@@ -442,9 +392,7 @@ select option {
     transition: var(--transition);
 }
 
-.car-card:hover .car-image-container img {
-    transform: scale(1.1); 
-}
+.car-card:hover .car-image-container img { transform: scale(1.1); }
 
 .car-details {
     padding: 25px;
@@ -461,11 +409,7 @@ select option {
     font-weight: 600;
 }
 
-.car-details h3 {
-    margin: 10px 0; 
-    font-size: 1.6rem; 
-    line-height: 1.3; 
-}
+.car-details h3 { margin: 10px 0; font-size: 1.6rem; line-height: 1.3; }
 
 .car-price {
     font-size: 1.4rem;
@@ -486,11 +430,7 @@ select option {
     gap: 10px;
 }
 
-.car-specs-preview span { 
-    display: flex; 
-    align-items: center; 
-    gap: 5px; 
-}
+.car-specs-preview span { display: flex; align-items: center; gap: 5px; }
 
 .view-details-btn {
     margin-top: auto;
@@ -518,10 +458,7 @@ select option {
     color: var(--primary-black);
 }
 
-.location-section { 
-    padding: 100px 20px; 
-    background: var(--secondary-black);
-}
+.location-section { padding: 100px 20px; background: var(--secondary-black); }
 
 .location-content {
     display: grid;
@@ -530,11 +467,7 @@ select option {
     margin-top: 40px;
 }
 
-.location-info { 
-    display: flex; 
-    flex-direction: column;
-     gap: 25px; 
-}
+.location-info { display: flex; flex-direction: column; gap: 25px; }
 
 .info-box {
     display: flex;
@@ -551,22 +484,9 @@ select option {
     transform: translateX(5px);
 }
 
-.info-box i {
-    font-size: 1.8rem; 
-    color: var(--gold);
-     margin-top: 5px; 
-}
-
-.info-box h4 { 
-    margin-bottom: 10px; 
-    color: var(--white); 
-}
-
-.info-box p { 
-    color: var(--gray-light); 
-    font-size: 0.95rem; 
-    margin-bottom: 5px; 
-}
+.info-box i { font-size: 1.8rem; color: var(--gold); margin-top: 5px; }
+.info-box h4 { margin-bottom: 10px; color: var(--white); }
+.info-box p { color: var(--gray-light); font-size: 0.95rem; margin-bottom: 5px; }
 
 .map-container {
     height: 100%;
@@ -1103,13 +1023,10 @@ footer {
     .modal-actions { flex-direction: column; }
     .modal-actions .btn { width: 100%; }
     
-    .main-image-wrapper .nav-arrow { width: 40px; height: 40px; font-size: 1.2rem; opacity: 1; }
-    .main-image-wrapper .nav-arrow.prev { left: 10px; }
-    .main-image-wrapper .nav-arrow.next { right: 10px; }
-    
-    .lightbox .nav-arrow { width: 40px; height: 40px; font-size: 20px; }
-    .lightbox-prev { left: 10px; }
-    .lightbox-next { right: 10px; }
+    .main-image-wrapper .nav-arrow,
+    .lightbox .nav-arrow {
+        display: none !important;
+    }
 }
 
 @media (max-width: 480px) {

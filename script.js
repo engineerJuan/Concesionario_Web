@@ -393,6 +393,8 @@ const closeLightbox = document.querySelector('.close-lightbox');
 let currentModalImages = [];
 let currentImageIndex = 0;
 let currentCarData = null;
+let touchStartX = 0;
+let touchEndX = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
     if (carsGrid) {
@@ -406,6 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupNewsletter();
     setupLightboxEvents();
     setupMobileMenu();
+    setupSwipe();
 });
 
 function setupLightboxEvents() {
@@ -905,6 +908,30 @@ function showNotification(message, type = "success") {
             notification.remove();
         }, 300);
     }, 3000);
+}
+
+function setupSwipe() {
+    const gallery = document.querySelector('.main-image-wrapper');
+    if (!gallery) return;
+
+    gallery.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+
+    gallery.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, {passive: true});
+}
+
+function handleSwipe() {
+    const threshold = 50; 
+    if (touchEndX < touchStartX - threshold) {
+        nextImage();
+    }
+    if (touchEndX > touchStartX + threshold) {
+        prevImage();
+    }
 }
 
 document.addEventListener('contextmenu', e => {
