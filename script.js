@@ -225,7 +225,7 @@ const carsData = [
         price: "10.7",
         priceUnit: "MDP",
         kilometers: "1,571",
-        exteriorColor: "Azul (Blu Corsa)",
+        exteriorColor: "Azul (Blue Corsa)",
         interiorColor: "Negro y Amarillo",
         imageBase: "Ferrari296Gtb",
         imageExtension: ".webp",
